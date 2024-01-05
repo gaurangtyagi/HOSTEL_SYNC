@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body class="h-screen">
+    <header class="p-2 bg-zinc-900 shadow-md">
+      <div class="container mx-auto flex justify-between items-center">
+        <a class="block box-border h-12 w-12 md:h-16 md:w-16 overflow-hidden rounded-full transform hover:scale-110" href="">
+        <img class="h-full w-full object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE2EIX-6qr4H-PuRC-oUFJdWbVMOkuWHIKHfPUU_gFmA&s" alt="Logo of my example, this is a heart image">
+      </a>
+    <div>
+      <button id="toggle-menu-button" class="z-50 md:hidden relative">
+        <span class="sr-only">Toggle Menu</span>
+        <div id="open" class="h-7 flex flex-col items-end justify-between">
+          <span class="block h-0.5 w-8 bg-white rounded-full"></span>
+        <span class="block h-0.5 w-6 bg-white rounded-full"></span>
+        <span class="block h-0.5 w-8 bg-white rounded-full"></span>
+        </div>
+        <div  id="close" class="hidden h-7 flex flex-col items-end justify-between">
+          <span class="block h-0.5 w-8 bg-red-100 rounded-full origin-left transform rotate-45 translate-y-0.5"></span>
+        <span class="block h-0.5 w-8 bg-red-100 rounded-full origin-left transform -rotate-45 -translate-y-0.5"></span>
+        </div>
+      </button>
+      <div id="toggle-menu" class="hidden md:block font-bold text-red-100 text-right text-3xl bg-gray-800 fixed top-0 left-0 h-screen w-screen flex flex-col items-center justify-center md:text-lg md:relative md:text-red-900 md:bg-transparent md:w-auto md:h-auto md:text-left">
+        <ul class="flex flex-col gap-y-7 md:flex-row md:gap-2">
+        <!-- <li class="md:border-r md:px-4 md:border-red-200">
+          <a href="" title"Go to XXX" class="transition ease-in-out duration-150 hover:line-through">Home</a></li> -->
+        <li class="md:border-r md:px-4 md:border-red-200 text-white">
+          <a href="" title"Go to XXX" class="transition ease-in-out duration-150 ">ALL CATEGORIES</a>
+        </li>
+        <li class="md:border-r md:px-4 md:border-red-200 text-white">
+          <a href="" title"Go to XXX" class="transition ease-in-out duration-150 ">ABOUT US</a>
+        </li>
+        <!-- <li class="md:border-r md:px-4 md:border-red-200">
+          <a href="" title"Go to XXX" class="transition ease-in-out duration-150 hover:line-through">Random</a>
+        </li>
+        <li class="md:border-r md:px-4 md:border-red-200">
+          <a href="" title"Go to XXX" class="transition ease-in-out duration-150 hover:line-through">Abous us</a>
+        </li> -->
+        <li class="md:px-4 text-white">
+          <a href="" title"Go to XXX" class="transition ease-in-out duration-150">CONTACT US</a>
+        </li>
+      </ul>
+      </div>
+    </div>
+      </div>
+    </header>
+      
+    
+    <script>
+var button = document.querySelector('#toggle-menu-button');
+var menu = document.querySelector('#toggle-menu');
+var open = document.querySelector('#open');
+var close = document.querySelector('#close');
+
+button.addEventListener('click', (e)=>{
+  menu.classList.toggle('hidden');
+  open.classList.toggle('hidden');
+  close.classList.toggle('hidden');
+});
+    </script>
+   
+      
